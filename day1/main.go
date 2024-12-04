@@ -8,15 +8,9 @@ import (
 	"os"
 	"sort"
 	"time"
-)
 
-// abs returns the absolute value of an integer
-func abs(x int) int {
-	if x < 0 {
-		return -x
-	}
-	return x
-}
+	"github.com/madeadi/aoc2024/util"
+)
 
 func main() {
 	part1()
@@ -56,7 +50,7 @@ func part1() {
 	totalDistance := 0
 	// loop through array1 and array2
 	for i := 0; i < len(array1); i++ {
-		totalDistance += abs(array1[i] - array2[i])
+		totalDistance += util.Abs(array1[i] - array2[i])
 	}
 
 	elapsed := time.Since(start)
